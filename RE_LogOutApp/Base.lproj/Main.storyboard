@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,6 +35,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-Tx-oEE">
                                 <rect key="frame" x="140" y="294" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <segue destination="Dqi-Qr-5sx" kind="showDetail" id="QEK-Q2-nCN"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="108" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-0L-ruM">
                                 <rect key="frame" x="60" y="345" width="200" height="30"/>
@@ -77,8 +81,58 @@
             </objects>
             <point key="canvasLocation" x="139" y="78"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xmg-c7-6lh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Dqi-Qr-5sx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="17I-Ix-HHh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great! 😏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYu-MB-kd5">
+                                <rect key="frame" x="87" y="263" width="146" height="42"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEZ-Mf-y2Y">
+                                <rect key="frame" x="104" y="385" width="112" height="49"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="32"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.86583227039999999" green="0.75212585030000001" blue="0.15377869899999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FM9-13-0V3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QEZ-Mf-y2Y" firstAttribute="leading" secondItem="FM9-13-0V3" secondAttribute="leading" constant="104" id="1bf-wy-kzp"/>
+                            <constraint firstItem="eYu-MB-kd5" firstAttribute="centerX" secondItem="17I-Ix-HHh" secondAttribute="centerX" id="5hX-IQ-bcD"/>
+                            <constraint firstItem="FM9-13-0V3" firstAttribute="trailing" secondItem="QEZ-Mf-y2Y" secondAttribute="trailing" constant="104" id="fGn-mm-aYH"/>
+                            <constraint firstItem="eYu-MB-kd5" firstAttribute="centerY" secondItem="17I-Ix-HHh" secondAttribute="centerY" id="gQJ-Nj-S3l"/>
+                            <constraint firstItem="QEZ-Mf-y2Y" firstAttribute="top" secondItem="eYu-MB-kd5" secondAttribute="bottom" constant="80" id="pIT-vm-lB5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRf-5Z-gkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="77"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
