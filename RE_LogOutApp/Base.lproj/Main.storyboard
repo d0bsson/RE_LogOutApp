@@ -36,6 +36,7 @@
                                 <rect key="frame" x="140" y="294" width="97" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
+                                    <action selector="logInTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mO9-de-3ms"/>
                                     <segue destination="Dqi-Qr-5sx" kind="showDetail" id="QEK-Q2-nCN"/>
                                 </connections>
                             </button>
@@ -45,10 +46,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-yr-plH">
                                         <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
                                         <state key="normal" title="Login?"/>
+                                        <connections>
+                                            <action selector="forgottenLoginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XH-um-rwh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdj-cT-HVW">
                                         <rect key="frame" x="181.5" y="0.0" width="73.5" height="30"/>
                                         <state key="normal" title="Pass?"/>
+                                        <connections>
+                                            <action selector="forgottenPassTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHU-Mx-spo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,15 +83,21 @@
                             <constraint firstItem="IDi-Kc-6lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="ybv-zS-orV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgottenLoginButton" destination="0LH-yr-plH" id="aFf-x1-9iz"/>
+                        <outlet property="forgottenPassButton" destination="Qdj-cT-HVW" id="w0l-sR-7IE"/>
+                        <outlet property="loginTF" destination="LZi-vi-5YR" id="LiB-CS-mPG"/>
+                        <outlet property="passwordTF" destination="imY-0Z-Ntc" id="Rzn-Qs-svi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--Log Out View Controller-->
         <scene sceneID="Xmg-c7-6lh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Dqi-Qr-5sx" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Dqi-Qr-5sx" customClass="LogOutViewController" customModule="RE_LogOutApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17I-Ix-HHh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,9 +109,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEZ-Mf-y2Y">
-                                <rect key="frame" x="104" y="459" width="167" height="49"/>
+                                <rect key="frame" x="104" y="457" width="167" height="53"/>
                                 <color key="backgroundColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.86583227039999999" green="0.75212585030000001" blue="0.15377869899999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
