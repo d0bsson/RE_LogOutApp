@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let login = "login"
+    private let login = "David"
     private let password = "123"
     
     @IBOutlet weak var loginTF: UITextField!
@@ -17,21 +17,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var forgottenLoginButton: UIButton!
     @IBOutlet weak var forgottenPassButton: UIButton!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let logOutVC = segue.destination as? LogOutViewController else { return }
+        logOutVC.login = login
+    }
+    
     @IBAction func logInTapped() {
         if loginTF.text != login || passwordTF.text != password {
             alert(title: "Oops", message: "Wrong login or password")
-            passwordTF.text = ""
         }
         loginTF.text = ""
         passwordTF.text = ""
     }
-        
+    
     @IBAction func forgottenLoginTapped() {
-        alert(title: "You login is \(login)", message: "Pls enter your login")
+        alert(
+            title: "You login is \(login)",
+            message: "Pls enter your login"
+        )
     }
     
     @IBAction func forgottenPassTapped() {
-        alert(title: "You password is \(password)", message: "Pls enter your password")
+        alert(
+            title: "You password is \(password)",
+            message: "Pls enter your password"
+        )
     }
 }
 

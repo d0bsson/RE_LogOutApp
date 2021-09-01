@@ -11,14 +11,16 @@ class LogOutViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    var login: String!
+    var password: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        welcomeLabel.text = "Great, \(login)👌"
-
+        welcomeLabel.text = "Great, \(login ?? "")"
     }
     
     @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
+        dismiss(animated: true) 
     }
     
 }
