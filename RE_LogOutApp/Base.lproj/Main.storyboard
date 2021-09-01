@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y7z-Wp-qw3">
-                                <rect key="frame" x="60" y="200" width="255" height="76"/>
+                                <rect key="frame" x="60" y="231.5" width="255" height="76"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZi-vi-5YR">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="34"/>
@@ -33,25 +33,43 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-Tx-oEE">
-                                <rect key="frame" x="140" y="294" width="97" height="30"/>
-                                <state key="normal" title="Log In"/>
+                                <rect key="frame" x="114" y="327.5" width="147" height="48"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="ntt-Gh-s9X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logInTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mO9-de-3ms"/>
                                     <segue destination="Dqi-Qr-5sx" kind="showDetail" id="QEK-Q2-nCN"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="108" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-0L-ruM">
-                                <rect key="frame" x="60" y="345" width="255" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log and Out" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-Kc-6lh">
+                                <rect key="frame" x="47" y="56" width="284" height="77"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="48"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-JO-h7b">
+                                <rect key="frame" x="95" y="395.5" width="185" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LH-yr-plH">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                         <state key="normal" title="Login?"/>
                                         <connections>
                                             <action selector="forgottenLoginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XH-um-rwh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdj-cT-HVW">
-                                        <rect key="frame" x="181.5" y="0.0" width="73.5" height="30"/>
+                                        <rect key="frame" x="145" y="0.0" width="40" height="30"/>
                                         <state key="normal" title="Pass?"/>
                                         <connections>
                                             <action selector="forgottenPassTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HHU-Mx-spo"/>
@@ -59,27 +77,19 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log and Out" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-Kc-6lh">
-                                <rect key="frame" x="47" y="56" width="284" height="77"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="48"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="cJc-0L-ruM" firstAttribute="top" secondItem="1Sd-Tx-oEE" secondAttribute="bottom" constant="21" id="1WG-yQ-aJp"/>
                             <constraint firstItem="IDi-Kc-6lh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="3yR-IX-nnl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Sd-Tx-oEE" secondAttribute="trailing" constant="138" id="BXm-T9-bf0"/>
+                            <constraint firstItem="1Sd-Tx-oEE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8lC-Af-fAR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDi-Kc-6lh" secondAttribute="trailing" constant="44" id="EoF-wh-ghH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y7z-Wp-qw3" secondAttribute="trailing" constant="60" id="MUT-l7-o5J"/>
-                            <constraint firstItem="1Sd-Tx-oEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="VkP-5X-Uo4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJc-0L-ruM" secondAttribute="trailing" constant="60" id="cvB-uw-FPS"/>
-                            <constraint firstItem="Y7z-Wp-qw3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="jSm-Cg-AK5"/>
+                            <constraint firstItem="hgp-JO-h7b" firstAttribute="top" secondItem="1Sd-Tx-oEE" secondAttribute="bottom" constant="20" id="WWp-mq-VBT"/>
                             <constraint firstItem="Y7z-Wp-qw3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="lsg-w4-5Sg"/>
-                            <constraint firstItem="1Sd-Tx-oEE" firstAttribute="top" secondItem="Y7z-Wp-qw3" secondAttribute="bottom" constant="18" id="uK9-9d-g0Z"/>
-                            <constraint firstItem="cJc-0L-ruM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="uNR-hp-ava"/>
+                            <constraint firstItem="1Sd-Tx-oEE" firstAttribute="top" secondItem="Y7z-Wp-qw3" secondAttribute="bottom" constant="20" id="tXt-VI-IVM"/>
+                            <constraint firstItem="hgp-JO-h7b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpZ-E9-U8h"/>
+                            <constraint firstItem="Y7z-Wp-qw3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="udf-IH-5GH"/>
                             <constraint firstItem="IDi-Kc-6lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="ybv-zS-orV"/>
                         </constraints>
                     </view>
@@ -92,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="78"/>
+            <point key="canvasLocation" x="138.40000000000001" y="77.811094452773617"/>
         </scene>
         <!--Log Out View Controller-->
         <scene sceneID="Xmg-c7-6lh">

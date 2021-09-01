@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     
     @IBAction func logInTapped() {
         
@@ -28,21 +28,24 @@ class ViewController: UIViewController {
     
     
     @IBAction func forgottenLoginTapped() {
-        alert(title: "You login is \(login)")
+        alert(title: "You login is \(login)", message: "Pls enter your login")
     }
     
     
     @IBAction func forgottenPassTapped() {
-        alert(title: "You password is \(password)")
+        alert(title: "You password is \(password)", message: "Pls enter your password")
     }
     
-    private func alert(title: String) {
-        let alert = UIAlertController()
-        let okAction = UIAlertAction(title: title, style: .default) { _ in
+    private func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Oops!", style: .cancel) { _ in
             self.passwordTF.text = ""
         }
-        alert.addAction(okAction)
         present(alert, animated: true)
+        alert.addAction(okAction)
     }
+    
 }
 
