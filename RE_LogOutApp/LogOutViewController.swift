@@ -9,9 +9,16 @@ import UIKit
 
 class LogOutViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        welcomeLabel.text = "Great, \(login)👌"
 
     }
-
+    
+    @IBAction func logOutButtonPressed() {
+        dismiss(animated: true)
+    }
+    
 }
