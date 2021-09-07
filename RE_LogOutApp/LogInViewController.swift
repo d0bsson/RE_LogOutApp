@@ -9,27 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let login = "David"
-    private let password = "123"
-    
+    //MARK: - IB Outlets
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var forgottenLoginButton: UIButton!
     @IBOutlet weak var forgottenPassButton: UIButton!
     
+   
+    //MARK: - Private Properties
+    private let login = "David"
+    private let password = "123"
+    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let logOutVC = segue.destination as? LogOutViewController else { return }
         logOutVC.login = login
     }
     
-    @IBAction func logInTapped() {
-        if loginTF.text != login || passwordTF.text != password {
-            alert(title: "Oops", message: "Wrong login or password")
-        }
-        loginTF.text = ""
-        passwordTF.text = ""
-    }
-    
+    // MARK: - IB Actions
     @IBAction func forgottenLoginTapped() {
         alert(
             title: "You login is \(login)",
@@ -43,6 +40,7 @@ class ViewController: UIViewController {
             message: "Pls enter your password"
         )
     }
+    
 }
 
 extension ViewController {
